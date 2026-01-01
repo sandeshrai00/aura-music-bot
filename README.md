@@ -102,17 +102,17 @@ Visit [https://www.auramusic.tech/](https://www.auramusic.tech/) for:
 ## 📸 Screenshots
 
 <p align="center">
-  <img src="img/img1.png" alt="Aura Music Feature 1" width="45%">
-  <img src="img/img2.png" alt="Aura Music Feature 2" width="45%">
+  <img src="img/img1.png" alt="Aura Music Feature 1" style="width: 45%; max-width: 400px; height: 250px; object-fit: cover; border-radius: 8px; margin: 5px;">
+  <img src="img/img2.png" alt="Aura Music Feature 2" style="width: 45%; max-width: 400px; height: 250px; object-fit: cover; border-radius: 8px; margin: 5px;">
 </p>
 
 <p align="center">
-  <img src="img/img3.png" alt="Aura Music Feature 3" width="45%">
-  <img src="img/img4.png" alt="Aura Music Feature 4" width="45%">
+  <img src="img/img3.png" alt="Aura Music Feature 3" style="width: 45%; max-width: 400px; height: 250px; object-fit: cover; border-radius: 8px; margin: 5px;">
+  <img src="img/img4.png" alt="Aura Music Feature 4" style="width: 45%; max-width: 400px; height: 250px; object-fit: cover; border-radius: 8px; margin: 5px;">
 </p>
 
 <p align="center">
-  <img src="img/img5.png" alt="Aura Music Feature 5" width="70%">
+  <img src="img/img5.png" alt="Aura Music Feature 5" style="width: 70%; max-width: 600px; height: 350px; object-fit: cover; border-radius: 8px; margin: 10px;">
 </p>
 
 ---
