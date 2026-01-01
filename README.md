@@ -19,10 +19,6 @@
   </a>
 </p>
 
-<p align="center">
-  <img src="img/ui-preview.png" alt="Aura Music Bot UI Preview" width="100%">
-</p>
-
 > 🔒 **Note**: Aura Music is **not open source**. This repository is a public showcase and documentation hub only.
 
 ---
