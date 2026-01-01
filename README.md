@@ -19,9 +19,7 @@
   </a>
 </p>
 
-> 🔒 **Note**: Aura Music is **not open source**. This repository is a public showcase and documentation hub only.
 
----
 
 ## ✨ Why Aura Music?
 
@@ -118,6 +116,10 @@ Visit [https://www.auramusic.tech/](https://www.auramusic.tech/) for:
 - Join our [Support Server](https://discord.gg/n8njD2xV)
 - Email: support@auramusic.tech
 - FAQs: Available on our website
+
+---
+
+> 🔒 **Note**: Aura Music is **not open source**. This repository is a public showcase and documentation hub only.
 
 ---
 
