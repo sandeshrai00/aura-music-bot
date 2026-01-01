@@ -102,7 +102,7 @@ Visit [https://www.auramusic.tech/](https://www.auramusic.tech/) for:
 ## 📸 Screenshots
 
 <p align="center">
-  <img src="img/img1.png" alt="Aura Music Feature 1" style="width: 45%; max-width: 400px; height: 250px; object-fit: cover; border-radius: 8px; margin: 5px;">
+  <img src="img/ui-preview.png.png" alt="Aura Music Feature 1" style="width: 45%; max-width: 400px; height: 250px; object-fit: cover; border-radius: 8px; margin: 5px;">
   <img src="img/img2.png" alt="Aura Music Feature 2" style="width: 45%; max-width: 400px; height: 250px; object-fit: cover; border-radius: 8px; margin: 5px;">
 </p>
 
