@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Support Aura Music</title>
+
+  <link rel="icon" href="img/favicon.png">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div class="container">
+  <h1 class="title">Aura Music</h1>
+  <p class="subtitle">Support the project to keep it alive and growing!</p>
+
+  <!-- Donation -->
+  <div class="card">
+    <h2>Scan to Donate</h2>
+
+    <div class="qr-frame">
+      <img src="img/2us.jpg" id="qrImage" class="qr-image">
+    </div>
+
+    <div class="wallet-code">
+      0x316278cc4085552abc0f1e25aaf62ab78e2b2d83
+    </div>
+
+    <p class="helper">Choose amount:</p>
+
+    <div class="preset-amounts">
+      <button class="active" onclick="changeQR(this, '2us.jpg', '$2')">$2</button>
+      <button onclick="changeQR(this, '20us.jpg', '$20')">$20</button>
+      <button onclick="changeQR(this, '50us.jpg', '$50')">$50</button>
+    </div>
+
+    <p class="label" id="selectedLabel">Selected: $2 QR</p>
+    <p class="amount-label" id="amountLabel">Amount: $2</p>
+  </div>
+
+  <!-- Other Crypto -->
+  <div class="card">
+    <h2>Other Crypto Options</h2>
+
+    <!-- USDT -->
+    <div class="crypto-item">
+      <div class="wallet-row clickable" onclick="toggleCrypto('usdt')">
+        <div class="wallet-left">
+          <img src="img/usdt.png" class="wallet-icon">
+          <div>
+            <strong>USDT (BEP20)</strong>
+            <small>BNB Smart Chain</small>
+          </div>
+        </div>
+      </div>
+
+      <div class="crypto-expand" id="usdt-box">
+        <div class="qr-frame">
+          <img src="img/usdt.jpg" class="qr-image">
+        </div>
+        <div class="wallet-code">
+          0x316278cc4085552abc0f1e25 aaf62ab78e2b2d83
+        </div>
+        <button onclick="copyAddress()">Copy Address</button>
+      </div>
+    </div>
+
+    <!-- BNB -->
+    <div class="crypto-item">
+      <div class="wallet-row clickable" onclick="toggleCrypto('bnb')">
+        <div class="wallet-left">
+          <img src="img/bnb.png" class="wallet-icon">
+          <div>
+            <strong>BNB</strong>
+            <small>BNB Smart Chain</small>
+          </div>
+        </div>
+      </div>
+
+      <div class="crypto-expand" id="bnb-box">
+        <div class="qr-frame">
+          <img src="img/bnb.jpg" class="qr-image">
+        </div>
+        <div class="wallet-code">
+          0x316278cc4085552abc0f1e25 aaf62ab78e2b2d83
+        </div>
+        <button onclick="copyAddress()">Copy Address</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="toast" class="toast">Copied!</div>
+
+<script src="script.js"></script>
+</body>
+</html>
