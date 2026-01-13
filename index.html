@@ -4,94 +4,205 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Support Aura Music</title>
-
   <link rel="icon" href="img/final.png">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
 <div class="container">
-  <h1 class="title">Aura Music</h1>
-  <p class="subtitle">Support the project to keep it alive and growing!</p>
+  <!-- Header Section -->
+  <header class="header">
+    <div class="logo-container">
+      <img src="img/final.png" alt="Aura Music Logo" class="logo">
+    </div>
+    <h1 class="title">Aura Music</h1>
+    <p class="subtitle">Support the project to keep it alive and growing</p>
+  </header>
 
-  <!-- Donation -->
-  <div class="card">
-    <h2>Scan to Donate</h2>
-
-    <div class="qr-frame">
-      <img src="img/2us.jpg" id="qrImage" class="qr-image">
+  <!-- Main Donation Card -->
+  <div class="card main-card">
+    <div class="card-header">
+      <h2 class="card-title">Quick Donate</h2>
+      <span class="card-badge">Popular</span>
     </div>
 
-    <div class="wallet-code">
-      0x316278cc4085552abc0f1e25aaf62ab78e2b2d83
+    <div class="qr-section">
+      <div class="qr-frame">
+        <img src="img/2us.jpg" id="qrImage" class="qr-image" alt="Donation QR Code">
+      </div>
     </div>
 
-    <p class="helper">Choose amount:</p>
-
-    <div class="preset-amounts">
-      <button class="active" onclick="changeQR(this, '2us.jpg', '$2')">$2</button>
-      <button onclick="changeQR(this, '20us.jpg', '$20')">$20</button>
-      <button onclick="changeQR(this, '50us.jpg', '$50')">$50</button>
+    <div class="wallet-section">
+      <label class="wallet-label">Wallet Address</label>
+      <div class="wallet-code" id="mainWallet" data-address="0x316278cc4085552abc0f1e25aaf62ab78e2b2d83">
+        <span class="wallet-text">0x316278cc4085552abc0f1e25aaf62ab78e2b2d83</span>
+        <button class="wallet-copy-icon" aria-label="Copy address">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+          </svg>
+        </button>
+      </div>
     </div>
 
-    <p class="label" id="selectedLabel">Selected: $2 QR</p>
-    <p class="amount-label" id="amountLabel">Amount: $2</p>
+    <div class="amount-section">
+      <label class="amount-label">Select Amount</label>
+      <div class="preset-amounts">
+        <button class="preset-btn active" data-qr="2us.jpg" data-amount="2">
+          <span class="preset-value">$2</span>
+        </button>
+        <button class="preset-btn" data-qr="20us.jpg" data-amount="20">
+          <span class="preset-value">$20</span>
+        </button>
+        <button class="preset-btn" data-qr="50us.jpg" data-amount="50">
+          <span class="preset-value">$50</span>
+        </button>
+        <button class="preset-btn" data-qr="100us.jpg" data-amount="100">
+          <span class="preset-value">$100</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="selected-amount">
+      <span class="selected-label">Selected Amount:</span>
+      <span class="selected-value" id="selectedAmount">$2</span>
+    </div>
   </div>
 
-  <!-- Other Crypto -->
+  <!-- Other Crypto Options -->
   <div class="card">
-    <h2>Other Crypto Options</h2>
-
-    <!-- USDT -->
-    <div class="crypto-item">
-      <div class="wallet-row clickable" onclick="toggleCrypto('usdt')">
-        <div class="wallet-left">
-          <img src="img/usdt.png" class="wallet-icon">
-          <div>
-            <strong>USDT (BEP20)</strong>
-            <small>BNB Smart Chain</small>
-          </div>
-        </div>
-      </div>
-
-      <div class="crypto-expand" id="usdt-box">
-        <div class="qr-frame">
-          <img src="img/usdt.jpg" class="qr-image">
-        </div>
-        <div class="wallet-code">
-          0x316278cc4085552abc0f1e25aaf62ab78e2b2d83
-        </div>
-        <button onclick="copyAddress()">Copy Address</button>
-      </div>
+    <div class="card-header">
+      <h2 class="card-title">Other Payment Methods</h2>
     </div>
 
-    <!-- BNB -->
-    <div class="crypto-item">
-      <div class="wallet-row clickable" onclick="toggleCrypto('bnb')">
-        <div class="wallet-left">
-          <img src="img/bnb.png" class="wallet-icon">
-          <div>
-            <strong>BNB</strong>
-            <small>BNB Smart Chain</small>
+    <div class="crypto-list">
+      <!-- USDT -->
+      <div class="crypto-item" data-crypto="usdt">
+        <div class="crypto-header">
+          <div class="crypto-info-left">
+            <img src="img/usdt.png" class="crypto-icon" alt="USDT">
+            <div class="crypto-details">
+              <div class="crypto-name">USDT (BEP20)</div>
+              <div class="crypto-network">BNB Smart Chain</div>
+            </div>
           </div>
+          <div class="crypto-toggle">
+            <span class="toggle-icon"></span>
+          </div>
+        </div>
+        
+        <div class="crypto-content">
+          <div class="qr-section">
+            <div class="qr-frame">
+              <img src="img/usdt.jpg" class="qr-image" alt="USDT QR Code">
+            </div>
+          </div>
+          <div class="wallet-section">
+            <label class="wallet-label">Wallet Address</label>
+            <div class="wallet-code" data-address="0x316278cc4085552abc0f1e25aaf62ab78e2b2d83">
+              <span class="wallet-text">0x316278cc4085552abc0f1e25aaf62ab78e2b2d83</span>
+              <button class="wallet-copy-icon" aria-label="Copy address">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <button class="copy-btn-full">Copy Address</button>
         </div>
       </div>
 
-      <div class="crypto-expand" id="bnb-box">
-        <div class="qr-frame">
-          <img src="img/bnb.jpg" class="qr-image">
+      <!-- BNB -->
+      <div class="crypto-item" data-crypto="bnb">
+        <div class="crypto-header">
+          <div class="crypto-info-left">
+            <img src="img/bnb.png" class="crypto-icon" alt="BNB">
+            <div class="crypto-details">
+              <div class="crypto-name">BNB</div>
+              <div class="crypto-network">BNB Smart Chain</div>
+            </div>
+          </div>
+          <div class="crypto-toggle">
+            <span class="toggle-icon"></span>
+          </div>
         </div>
-        <div class="wallet-code">
-          0x316278cc4085552abc0f1e25aaf62ab78e2b2d83
+        
+        <div class="crypto-content">
+          <div class="qr-section">
+            <div class="qr-frame">
+              <img src="img/bnb.jpg" class="qr-image" alt="BNB QR Code">
+            </div>
+          </div>
+          <div class="wallet-section">
+            <label class="wallet-label">Wallet Address</label>
+            <div class="wallet-code" data-address="0x316278cc4085552abc0f1e25aaf62ab78e2b2d83">
+              <span class="wallet-text">0x316278cc4085552abc0f1e25aaf62ab78e2b2d83</span>
+              <button class="wallet-copy-icon" aria-label="Copy address">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <button class="copy-btn-full">Copy Address</button>
         </div>
-        <button onclick="copyAddress()">Copy Address</button>
+      </div>
+
+      <!-- ETH -->
+      <div class="crypto-item" data-crypto="eth">
+        <div class="crypto-header">
+          <div class="crypto-info-left">
+            <img src="img/eth.png" class="crypto-icon" alt="ETH">
+            <div class="crypto-details">
+              <div class="crypto-name">Ethereum</div>
+              <div class="crypto-network">ERC-20</div>
+            </div>
+          </div>
+          <div class="crypto-toggle">
+            <span class="toggle-icon"></span>
+          </div>
+        </div>
+        
+        <div class="crypto-content">
+          <div class="qr-section">
+            <div class="qr-frame">
+              <img src="img/eth.jpg" class="qr-image" alt="ETH QR Code">
+            </div>
+          </div>
+          <div class="wallet-section">
+            <label class="wallet-label">Wallet Address</label>
+            <div class="wallet-code" data-address="0x316278cc4085552abc0f1e25aaf62ab78e2b2d83">
+              <span class="wallet-text">0x316278cc4085552abc0f1e25aaf62ab78e2b2d83</span>
+              <button class="wallet-copy-icon" aria-label="Copy address">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <button class="copy-btn-full">Copy Address</button>
+        </div>
       </div>
     </div>
   </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p class="footer-text">Thank you for supporting Aura Music</p>
+  </footer>
 </div>
 
-<div id="toast" class="toast">Copied!</div>
+<!-- Toast Notification -->
+<div id="toast" class="toast">
+  <svg class="toast-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+    <polyline points="20 6 9 17 4 12"></polyline>
+  </svg>
+  <span id="toastMessage">Copied to clipboard</span>
+</div>
 
 <script src="script.js"></script>
 </body>
-</html></html>
+</html>
