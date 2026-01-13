@@ -23,23 +23,11 @@ body {
 /* Header Styles */
 .header {
   text-align: center;
-  margin-bottom: 40px;
-  animation: fadeInDown 0.8s ease;
-}
-
-@keyframes fadeInDown {
-  from {
-    opacity: 0;
-    transform: translateY(-30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  margin-bottom: 30px;
 }
 
 .logo-container {
-  margin-bottom: 24px;
+  margin-bottom: 20px;
 }
 
 .logo {
@@ -47,16 +35,6 @@ body {
   height: 90px;
   border-radius: 50%;
   box-shadow: 0 4px 20px rgba(93, 173, 226, 0.3);
-  animation: float 3s ease-in-out infinite;
-}
-
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
 }
 
 .title {
@@ -73,6 +51,40 @@ body {
   font-weight: 400;
 }
 
+/* Impact Card */
+.impact-card {
+  background: linear-gradient(135deg, #2a2a2a 0%, #1f1f1f 100%);
+  border: 2px solid #5DADE2;
+  border-radius: 16px;
+  padding: 24px;
+  margin-bottom: 24px;
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.impact-icon {
+  font-size: 2.5rem;
+  flex-shrink: 0;
+}
+
+.impact-content {
+  flex: 1;
+}
+
+.impact-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #5DADE2;
+  margin-bottom: 10px;
+}
+
+.impact-text {
+  color: #d0d0d0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
 /* Card Styles */
 .card {
   background: #2a2a2a;
@@ -80,19 +92,7 @@ body {
   border-radius: 16px;
   padding: 28px;
   margin-bottom: 24px;
-  animation: slideUp 0.8s ease;
   transition: all 0.3s ease;
-}
-
-@keyframes slideUp {
-  from {
-    opacity: 0;
-    transform: translateY(40px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
 
 .card:hover {
@@ -107,7 +107,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 24px;
+  margin-bottom: 20px;
 }
 
 .card-title {
@@ -126,6 +126,33 @@ body {
   text-transform: uppercase;
 }
 
+.card-badge-premium {
+  background: linear-gradient(135deg, #FFD700, #FFA500);
+  color: #1a1a1a;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  box-shadow: 0 2px 8px rgba(255, 215, 0, 0.3);
+}
+
+/* Donation Message */
+.donation-message {
+  background: #1f1f1f;
+  border-left: 4px solid #5DADE2;
+  padding: 16px;
+  margin-bottom: 24px;
+  border-radius: 8px;
+}
+
+.donation-message p {
+  color: #d0d0d0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
 /* QR Section */
 .qr-section {
   margin-bottom: 24px;
@@ -137,39 +164,13 @@ body {
   border-radius: 12px;
   text-align: center;
   border: 1px solid #3a3a3a;
-  position: relative;
-  overflow: hidden;
-}
-
-.qr-frame::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(93, 173, 226, 0.1), transparent);
-  animation: shimmer 3s infinite;
-}
-
-@keyframes shimmer {
-  0% {
-    left: -100%;
-  }
-  100% {
-    left: 100%;
-  }
 }
 
 .qr-image {
   width: 100%;
   max-width: 280px;
   border-radius: 8px;
-  transition: all 0.4s ease;
-}
-
-.qr-image:hover {
-  transform: scale(1.03);
+  transition: opacity 0.4s ease;
 }
 
 .qr-image.loading {
@@ -265,26 +266,6 @@ body {
   font-size: 1.1rem;
   cursor: pointer;
   transition: all 0.3s ease;
-  position: relative;
-  overflow: hidden;
-}
-
-.preset-btn::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 0;
-  height: 0;
-  border-radius: 50%;
-  background: rgba(93, 173, 226, 0.2);
-  transform: translate(-50%, -50%);
-  transition: width 0.5s, height 0.5s;
-}
-
-.preset-btn:hover::before {
-  width: 200px;
-  height: 200px;
 }
 
 .preset-btn:hover {
@@ -297,10 +278,6 @@ body {
   background: #5DADE2;
   border-color: #5DADE2;
   box-shadow: 0 4px 12px rgba(93, 173, 226, 0.4);
-}
-
-.preset-btn.active::before {
-  display: none;
 }
 
 .preset-value {
@@ -331,7 +308,6 @@ body {
   color: #5DADE2;
   font-weight: 700;
   font-size: 1.2rem;
-  transition: transform 0.2s ease;
 }
 
 /* Crypto List */
@@ -484,20 +460,40 @@ body {
   transform: translateY(0);
 }
 
+/* Thank You Card */
+.thankyou-card {
+  background: linear-gradient(135deg, #2a2a2a 0%, #1f1f1f 100%);
+  border: 1px solid #3a3a3a;
+  border-radius: 16px;
+  padding: 28px;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.thankyou-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #5DADE2;
+  margin-bottom: 14px;
+}
+
+.thankyou-text {
+  color: #d0d0d0;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+
+.thankyou-signature {
+  color: #b0b0b0;
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
 /* Footer */
 .footer {
   text-align: center;
-  padding: 40px 0 20px;
-  animation: fadeIn 1.2s ease 0.4s both;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+  padding: 30px 0 20px;
 }
 
 .footer-text {
@@ -546,6 +542,15 @@ body {
     font-size: 1rem;
   }
 
+  .impact-card {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .impact-icon {
+    font-size: 2rem;
+  }
+
   .card {
     padding: 20px;
   }
@@ -581,5 +586,13 @@ body {
   .preset-btn {
     font-size: 1rem;
     padding: 14px 8px;
+  }
+
+  .impact-title {
+    font-size: 1.1rem;
+  }
+
+  .thankyou-title {
+    font-size: 1.1rem;
   }
 }
